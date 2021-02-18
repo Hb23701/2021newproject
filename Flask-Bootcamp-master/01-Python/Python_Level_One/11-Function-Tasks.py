@@ -13,33 +13,33 @@
 #  Create a function that takes in two integers and returns
 ## a Boolean True if their sum is 10, False if their sum is something else.
 
-def check_ten(n1,n2):
-    return n1+n2 
+# def check_ten(n1,n2):
+#     return n1+n2 
 
-result = check_ten(1,9)
+# result = check_ten(1,9)
 
-if result == 10:
-    print ("True")
-else:
-    print("False")
-
-
+# if result == 10:
+#     print ("True")
+# else:
+#     print("False")
 
 
-## Task 2
 
-# Create a function that takes in two integers and returns True if their
-# sum is 10, otherwise, return the actual sum value.
 
-def check_ten_sum(n1,n2):
-    return n1+n2
+# ## Task 2
 
-result = check_ten_sum(5,6)
+# # Create a function that takes in two integers and returns True if their
+# # sum is 10, otherwise, return the actual sum value.
 
-if result == 10:
-    print("True")
-else:
-    print (result)
+# def check_ten_sum(n1,n2):
+#     return n1+n2
+
+# result = check_ten_sum(5,6)
+
+# if result == 10:
+#     print("True")
+# else:
+#     print (result)
 
 
 
@@ -47,10 +47,10 @@ else:
 # #
 # # Create a function that takes in a string and returns back the
 # # first character of that string in upper case.
-def first_upper(mystring):
-    return a[0].upper(), b[0].upper()
+# def first_upper(mystring):
+#     return mystring[0].upper()
 
-print(mystring("hello","goodbye"))
+# print(first_upper("hello"))
 
 
 ## Task 4
@@ -62,26 +62,39 @@ print(mystring("hello","goodbye"))
 
 
 
-def last_two(mystring):
-    return char[0] in mystring
+# def last_two(mystring):
+#     if len(mystring)>2:
+#         return mystring[-2:]
+#     else:
+#         return "Error"
+    
+    
 
-print(mystring("hello"))
+# print(last_two("hello"))
+
+# print(last_two("he"))
+
+
 
 
 # ## Task 5
-#
-# Given a list of integers, return True if the sequence [1,2,3] is somewhere
-# in the list. Hint: Use slicing and a for loop.
+
+# # Given a list of integers, return True if the sequence [1,2,3] is somewhere
+# # in the list. Hint: Use slicing and a for loop.
 
 
 
-# def seq_check(nums):
+def seq_check(nums):
+    for n in nums:
+        for number in [1,2,3]:
+            if n == number:
+                return True
+            else:
+                return False
 
-#     # Code here
-
-#     pass
-
-
+print(seq_check([2,3,1,4,5,6]))
+print(seq_check([1,2,3,1,4,5,6]))
+print(seq_check([5,6,7,1,2,3,4,5,6]))
 # ## Task 6
 #
 # Given a 2 strings, create a function that returns the difference in length
