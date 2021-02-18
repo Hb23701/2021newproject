@@ -103,9 +103,11 @@ print(seq_check([5,6,7,1,2,3,4,5,6]))
 
 
 
-# def compare_len(s1,s2):
-#     # Code Here
-#     pass
+def compare_len(s1,s2):
+    return abs(len(s2)-len(s1))
+
+print(compare_len("abc","ab"))
+print (compare_len("hello","goodbye"))
 
 
 
@@ -117,7 +119,11 @@ print(seq_check([5,6,7,1,2,3,4,5,6]))
 
 
 
-# def sum_or_max(mylist):
+def sum_or_max(mylist):
+    if len(mylist)%2 == 0:
+        return sum(mylist)
+    else:
+        return max(mylist)
 
-#     # Code Here
-#     pass
+print(sum_or_max([1,2]))
+print(sum_or_max([1,2,3,4]))
